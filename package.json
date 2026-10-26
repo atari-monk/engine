@@ -1,7 +1,7 @@
 {
-  "name": "engine",
+  "name": "atari-monk-engine",
   "version": "0.0.1",
-  "description": "Game engine in TypeScript",
+  "description": "Game engine library in TypeScript",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

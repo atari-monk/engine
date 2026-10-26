@@ -1,15 +1,15 @@
-# Project `typescript-library`
+# Project `engine`
 
-Minimal TypeScript library template
+Game engine library in TypeScript
 
 ## Install
 
-pnpm add atari-monk-typescript-library
+```sh
+pnpm add atari-monk-engine
+```
 
 ### Usage
 
 ```ts
-import { hello } from "atari-monk-typescript-library";
-
-console.log(hello("world"));
+import {} from "atari-monk-engine";
 ```
