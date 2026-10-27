@@ -39,3 +39,10 @@
 - uses `requestAnimationFrame` for scheduling
 - calls the game's `render()` after updates
 - does not modify game state
+
+## test
+
+- create and start the game loop
+- simulate one frame of elapsed time `1 / 60`
+- verify `update(1 / 60)` is called once before `render()`
+- verify the loop continues scheduling frames until stopped
