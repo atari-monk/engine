@@ -40,7 +40,7 @@
 - calls the game's `render()` after updates
 - does not modify game state
 
-## test
+### test
 
 - create and start the game loop
 - simulate one frame of elapsed time `1 / 60`
