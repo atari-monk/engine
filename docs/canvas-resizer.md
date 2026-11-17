@@ -1,36 +1,42 @@
-## [canvas-resizer](code/canvas-resizer.md)
+# [canvas-resizer](code/canvas-resizer.md)
 
 - [task](#task)
 - [srs](#srs)
-- [usage](#usage)
 - [export](#export)
-- [import](#import)
+- [usage](#usage)
 - [notes](#notes)
 
-### task
+## task
 
 - [x] create `src/canvas-resizer.ts`
-- [x] copy code form game project experiments
+- [x] copy code from game project
 - [x] refactor to procedural style
 - [x] document srs from code
-- [x] document usage
 - [x] document export
-- [x] document import
+- [x] document usage
 - [x] publish library locally
-- [x] install lib in game project
+- [x] install in game project
 - [x] consume in game project
 - [x] test in game project
 - [x] commit
 
-### srs
+## srs
 
 - match canvas drawing buffer to display size and device pixel ratio
 - observe canvas size changes and resize automatically
 - notify callback on initial setup and every resize
 
-### usage
+## export
 
-- provided the canvas is sized to its container by CSS, for example:
+`src/index.ts`
+
+```ts
+export { type CanvasDimensions, observeCanvas } from "./canvas-resizer";
+```
+
+## usage
+
+- ensure the canvas is sized to its container using CSS:
 
 ```css
 .canvas-container {
@@ -48,6 +54,8 @@ canvas {
 - use canvas-resizer:
 
 ```ts
+import { type CanvasDimensions, observeCanvas } from "atari-monk-engine";
+
 observeCanvas(canvas, (dimensions: CanvasDimensions) => {
   console.log("Canvas resized:", dimensions);
 });
@@ -58,21 +66,7 @@ observeCanvas(canvas, (dimensions: CanvasDimensions) => {
 - drawing buffer adjusts to the displayed size and pixel ratio
 - resizing the container automatically triggers the callback
 
-### export
-
-`src/index.ts`
-
-```ts
-export { type CanvasDimensions, observeCanvas } from "./canvas-resizer";
-```
-
-### import
-
-```ts
-import { type CanvasDimensions, observeCanvas } from "atari-monk-engine";
-```
-
-### notes
+## notes
 
 - handles drawing buffer
 - game rendering needs to scale to handle DPR ?

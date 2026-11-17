@@ -1,26 +1,25 @@
-## [game loop](code/game-loop.md)
+# [game loop](code/game-loop.md)
 
 - [task](#task)
 - [srs](#srs)
 - [export](#export)
-- [import](#import)
 - [usage](#usage)
 
-### task
+## task
 
-- [x] document srs
+- [x] write srs
 - [x] create `src/game-loop.ts`
 - [x] implement code from srs
-- [x] document export
-- [x] document import
 - [x] commit feature
 - [x] publish library locally
 - [x] install lib in game project
 - [x] consume in game project
 - [x] test in game project
+- [x] document srs
+- [x] document export
 - [x] document usage
 
-### srs
+## srs
 
 - game loop for HTML Canvas games
 - loop state in TypeScript object
@@ -55,7 +54,7 @@
   - calls the game's `render()` after updates
   - does not modify game state
 
-### export
+## export
 
 `src/index.ts`
 
@@ -63,17 +62,13 @@
 export { type GameLoop, create, start, stop } from "./game-loop";
 ```
 
-### import
-
-```ts
-import { type GameLoop, create, start } from "atari-monk-engine";
-```
-
-### usage
+## usage
 
 - in game helper function:
 
 ```ts
+import { type GameLoop, create, start } from "atari-monk-engine";
+
 interface GameState {
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
