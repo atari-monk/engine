@@ -12,8 +12,6 @@
 - [x] implement code from srs
 - [x] commit feature
 - [x] publish library locally
-- [x] install lib in game project
-- [x] consume in game project
 - [x] test in game project
 - [x] document srs
 - [x] document export

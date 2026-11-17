@@ -15,10 +15,8 @@
 - [x] document export
 - [x] document usage
 - [x] publish library locally
-- [x] install in game project
-- [x] consume in game project
 - [x] test in game project
-- [x] commit
+- [x] commit feature
 
 ## srs
 
