@@ -1,4 +1,4 @@
-# [canvas-resizer](code/canvas-resizer.md)
+# [canvas-resizer](../code/canvas-resizer.md)
 
 - [task](#task)
 - [srs](#srs)

@@ -1,4 +1,4 @@
-# [game loop](code/game-loop.md)
+# [game loop](../code/game-loop.md)
 
 - [task](#task)
 - [srs](#srs)

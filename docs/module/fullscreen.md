@@ -1,4 +1,4 @@
-# [fullscreen](code/fullscreen.md)
+# [fullscreen](../code/fullscreen.md)
 
 - [task](#task)
 - [srs](#srs)
