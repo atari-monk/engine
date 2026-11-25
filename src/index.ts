@@ -15,10 +15,14 @@ export { vector2D } from "./math/vector2d";
 export { type Line2D } from "./math/line2d";
 export { line2D, drawLine } from "./math/line2d";
 
-export type {
-  CrossMath,
-  CrossLines,
-  CrossStyle,
-  Cross,
-} from "./game-object/corss";
+export { type Rect } from "./math/rect";
+export { rect } from "./math/rect";
+
+export { type Blink } from "./math/blink";
+export { createBlink, updateBlink } from "./math/blink";
+
+export type { CrossLines, CrossStyle, Cross } from "./game-object/corss";
 export { createCross, renderCross } from "./game-object/corss";
+
+export type { RectObject } from "./game-object/rect-object";
+export { createRectObject, renderRectObject } from "./game-object/rect-object";
