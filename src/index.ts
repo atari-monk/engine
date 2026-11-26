@@ -26,3 +26,6 @@ export { createCross, renderCross } from "./game-object/corss";
 
 export type { RectObject } from "./game-object/rect-object";
 export { createRectObject, renderRectObject } from "./game-object/rect-object";
+
+export type { GameElements } from "./game-elements";
+export { getGameElements } from "./game-elements";
