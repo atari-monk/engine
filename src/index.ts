@@ -29,3 +29,6 @@ export { createRectObject, renderRectObject } from "./game-object/rect-object";
 
 export type { GameElements } from "./game-elements";
 export { getGameElements } from "./game-elements";
+
+export type { PressStartOptions } from "./press-start";
+export { pressStart } from "./press-start";
