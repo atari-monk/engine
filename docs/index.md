@@ -7,3 +7,4 @@
 - [vector2d](module/vector2d.md)
 - [line2d](module/line2d.md)
 - [cross](module/cross.md)
+- [circle](module/circle.md)

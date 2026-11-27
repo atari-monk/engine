@@ -18,8 +18,11 @@ export { line2D, drawLine } from "./math/line2d";
 export { type Rect } from "./math/rect";
 export { rect } from "./math/rect";
 
-export { type Blink } from "./math/blink";
-export { createBlink, updateBlink } from "./math/blink";
+export { type Circle } from "./math/circle";
+export { circle } from "./math/circle";
+
+export { type Blink } from "./behavior/blink";
+export { createBlink, updateBlink } from "./behavior/blink";
 
 export type { CrossLines, CrossStyle, Cross } from "./game-object/corss";
 export { createCross, renderCross } from "./game-object/corss";
@@ -32,3 +35,9 @@ export { getGameElements } from "./game-elements";
 
 export type { PressStartOptions } from "./press-start";
 export { pressStart } from "./press-start";
+
+export type { CircleStyle, CircleObject } from "./game-object/circle-object";
+export {
+  createCircleObject,
+  renderCircleObject,
+} from "./game-object/circle-object";

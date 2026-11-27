@@ -1,7 +1,7 @@
 import { Vector2D, vector2D } from "../math/vector2d";
 import { Rect, rect } from "../math/rect";
 import { Filled, Stroked } from "./styles";
-import { Blink } from "../math/blink";
+import { Blink } from "../behavior/blink";
 
 export interface RectObject {
   rect: Rect;
