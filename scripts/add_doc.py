@@ -20,4 +20,4 @@ def create_file(filename: str):
         f.write(f"- [{filename}]({filename}/{filename}.md)\n")
 
 
-create_file("circle")
+create_file("player")

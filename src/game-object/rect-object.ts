@@ -2,10 +2,10 @@ import { Vector2D, vector2D } from "../math/vector2d";
 import { Rect, rect } from "../math/rect";
 import { Filled, Stroked } from "./styles";
 import { Blink } from "../behavior/blink";
+import { renderRect } from "../render/rect";
 
 export interface RectObject {
   rect: Rect;
-  topLeft: Vector2D;
   style: RectStyle;
 }
 
@@ -22,7 +22,6 @@ export function createRectObject(
 ): RectObject {
   return {
     rect: rect(center, size),
-    topLeft: vector2D(center.x - size.x / 2, center.y - size.y / 2),
     style: {
       filled,
       stroked,
@@ -36,23 +35,8 @@ export function renderRectObject(
   blink?: Blink,
 ): void {
   if (blink?.visible === false) return;
-  const { rect, topLeft } = object;
 
-  if (object.style.filled) {
-    ctx.fillStyle = object.style.filled.color;
-    ctx.fillRect(topLeft.x, topLeft.y, rect.size.x, rect.size.y);
-  }
+  const { rect, style } = object;
 
-  if (object.style.stroked) {
-    const { color, lineWidth } = object.style.stroked;
-    ctx.strokeStyle = color;
-    ctx.lineWidth = lineWidth;
-
-    ctx.strokeRect(
-      topLeft.x + lineWidth / 2,
-      topLeft.y + lineWidth / 2,
-      rect.size.x - lineWidth,
-      rect.size.y - lineWidth,
-    );
-  }
+  renderRect(ctx, rect, style.filled, style.stroked);
 }

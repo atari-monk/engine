@@ -8,3 +8,5 @@
 - [line2d](module/line2d.md)
 - [cross](module/cross.md)
 - [circle](module/circle.md)
+- [keyboard-input](module/keyboard-input.md)
+- [player](module/player.md)

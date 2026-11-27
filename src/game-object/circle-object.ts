@@ -1,6 +1,7 @@
 import { Blink } from "../behavior/blink";
 import { circle, Circle } from "../math/circle";
 import { Vector2D, vector2D } from "../math/vector2d";
+import { renderCircle } from "../render/circle";
 import { Filled, Stroked } from "./styles";
 
 export interface CircleStyle {
@@ -32,20 +33,8 @@ export function renderCircleObject(
 ): void {
   if (blink && !blink.visible) return;
 
-  const { center, radius } = object.circle;
+  const { circle } = object;
   const { filled, stroked } = object.style;
 
-  ctx.beginPath();
-  ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
-
-  if (filled) {
-    ctx.fillStyle = filled.color;
-    ctx.fill();
-  }
-
-  if (stroked) {
-    ctx.lineWidth = stroked.lineWidth;
-    ctx.strokeStyle = stroked.color;
-    ctx.stroke();
-  }
+  renderCircle(ctx, circle, filled, stroked);
 }
