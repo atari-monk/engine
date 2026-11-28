@@ -19,3 +19,13 @@ export function pressStart(options: PressStartOptions): void {
     { once: true },
   );
 }
+
+export function removeOverlay(): void {
+  const overlay = document.querySelector<HTMLDivElement>(".overlay");
+
+  if (!overlay) {
+    throw new Error("Overlay element not found");
+  }
+
+  overlay.remove();
+}

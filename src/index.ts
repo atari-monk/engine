@@ -38,7 +38,7 @@ export type { GameElements } from "./game-elements";
 export { getGameElements } from "./game-elements";
 
 export type { PressStartOptions } from "./press-start";
-export { pressStart } from "./press-start";
+export { pressStart, removeOverlay } from "./press-start";
 
 export type { CircleStyle, CircleObject } from "./game-object/circle-object";
 export {
@@ -50,8 +50,11 @@ export type { KeyboardInput } from "./keyboard-input";
 export { createKeyboardInput } from "./keyboard-input";
 
 export type { PlayerObject } from "./game-object/player";
+export { createPlayerObject, updatePlayerObject } from "./game-object/player";
+
+export type { ShapePlayer } from "./game-object/shape-player";
 export {
-  createPlayerObject,
-  updatePlayerObject,
-  renderPlayerObject,
-} from "./game-object/player";
+  createShapePlayer,
+  updateShapePlayer,
+  renderShapePlayer,
+} from "./game-object/shape-player";
